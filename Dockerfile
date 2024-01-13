@@ -1,4 +1,4 @@
-FROM techiescamp/jdk-17:1.0.0 AS build
+#FROM techiescamp/jdk-17:1.0.0 AS build
 
 # Copy the Java Application source code
 #COPY . /docker/nbiot_iffe_inventory/
