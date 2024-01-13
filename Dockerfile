@@ -21,8 +21,7 @@ WORKDIR /app
 
 # ---------------------------------------------------------------------------------------------------------
 # Build stage
-#FROM maven:3.6.0-jdk-11-slim AS build
-FROM maven:3.6.0-jdk-17-slim AS build
+FROM maven:3.6.0-jdk-11-slim AS build
 COPY src /home/devops/docker/app/src  
 COPY pom.xml /home/devops/docker/app/src
 RUN mvn -f /home/devops/docker/app/src/pom.xml clean package
