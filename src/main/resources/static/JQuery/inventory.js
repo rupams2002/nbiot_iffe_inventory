@@ -21,13 +21,19 @@ $(document).ready(function () {
 
 
 function APICallToSciLo(fiberID){
-
+    strSciLoIPAddress = $('#scilo_env_ip').val();
+    strDID            = $('#did').val();
+    
+    //console.log("strSciLoIPAddress = " + strSciLoIPAddress);
+    //console.log("strDID = " + strDID);
 
     $.ajax({
        type: 'GET',
        async: false,
        data: {
 			fiberID: fiberID,
+			strSciLoIPAddress: strSciLoIPAddress,
+			strDID: strDID
        },                   
        url: "/cms-service/webapi/sendAlerttoScilo",
        error: function(data) { alert("Error in 'cms-service/webapi/sendAlerttoScilo'");},

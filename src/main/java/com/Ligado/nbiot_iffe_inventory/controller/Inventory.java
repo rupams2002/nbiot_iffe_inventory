@@ -24,12 +24,28 @@ public class Inventory {
 		"    </head>"+
 		"    "+
 		"    <body>"+
-		"        <table style=\"width:100%\">"+
+		"        <table border='0' style=\"width:100%\">"+
 		"             <tr> "+
-		"                 <td colspan=\"3\" align='center'><h1>Northbound NBIOT IFFE Inventory</h1></td>"+
+		"                 <td align='center'><h1>Northbound NBIOT IFFE Inventory</h1></td>"+
+		"             </tr>             "+
+		"             <tr> "+		
+		"                 <td align='left'>" +
+		"						<div class='input-group mb-3'>" +
+		"  							<div class='input-group-prepend'>" +
+		"    							<span class='input-group-text' id='inputGroup-sizing-default'>ScienceLogic Environment</span>" +
+		" 							</div>" +
+		" 							<input type='text' value='https://ressiloaiodev.msvlp.com' id='scilo_env_ip' aria-label='Default' aria-describedby='inputGroup-sizing-default' style='width:300px;'>" +
+		"						</div>" +		
+		"						<div class='input-group mb-3'>" +
+		"  							<div class='input-group-prepend'>" +
+		"    							<span class='input-group-text' id='inputGroup-sizing-default'>Device ID (DID)</span>" +
+		" 							</div>" +
+		" 							<input type='text' value='1689' id='did' aria-label='Default' aria-describedby='inputGroup-sizing-default' style='width:60px;'>" +
+		"						</div>" +		
+		"				  </td>"+
 		"             </tr>             "+
 		"             <tr> "+
-		"                 <td colspan=\"3\" valign='top' align='center'>"+
+		"                 <td valign='top' align='center'>"+
 		"                    <table border='1'>"+
 		"                        <tr bgcolor='#ffff66'> "+
 		"                            <td width=\"5%\" align='center'><b>fiber_id</b></td>"+

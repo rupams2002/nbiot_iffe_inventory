@@ -37,7 +37,7 @@ public class LigadoController {
 
 	@GetMapping(value = "/HelloWorld")
     public String HelloWorld() throws Exception{
-		return "<h1>Test Application</h1><h2>Port : 10005</h2><h3>Application is running successfully on port 10005 </h3>";
+		return "<h1>Test Application</h1><h2>Port : 10005</h2><h3>Application is running successfully on port 10005</h3><h4>Version 1.0.0</h4>";
 	}
 	
 	
@@ -99,7 +99,7 @@ public class LigadoController {
 	
 	
 	@GetMapping(value = "/sendAlerttoScilo")
-    public SciloDataEntity sendAlerttoScilo(@RequestParam(name = "fiberID") int fiberID) throws Exception{
+    public SciloDataEntity sendAlerttoScilo( @RequestParam(name = "strSciLoIPAddress") String strSciLoIPAddress, @RequestParam(name = "strDID") String strDID, @RequestParam(name = "fiberID") int fiberID) throws Exception{
 
 		
 		HttpHeaders headers = new HttpHeaders();
@@ -114,8 +114,9 @@ public class LigadoController {
 		String jsonInventory = objectMapper.writeValueAsString(inventory);
 
 		//URI uri = new URI("https://10.1.3.115/api/alert");
-		URI uri = new URI("https://ressiloaiodev.msvlp.com/api/alert");
-		SciloDataEntity sciloData = new SciloDataEntity(jsonInventory, "/api/device/1689");
+		//URI uri = new URI("https://ressiloaiodev.msvlp.com/api/alert");
+		URI uri = new URI(strSciLoIPAddress + "/api/alert");
+		SciloDataEntity sciloData = new SciloDataEntity(jsonInventory, "/api/device/" + strDID);
 		
 		HttpEntity<SciloDataEntity> httpEntity = new HttpEntity(sciloData, headers);
 	    
