@@ -1,5 +1,5 @@
 server:
-  port: 10005
+  port: 10006
 #  ssl:
 #    enabled: false
 #    key-alias: local_ssl
