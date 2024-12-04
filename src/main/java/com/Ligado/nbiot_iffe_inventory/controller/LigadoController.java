@@ -37,7 +37,7 @@ public class LigadoController {
 
 	@GetMapping(value = "/HelloWorld")
     public String HelloWorld() throws Exception{
-		return "<h1>Test Application</h1><h2>Port : 10006</h2><h3>Application is running successfully on port 10005</h3><h4>Version 1.0.1</h4>";
+		return "<h1>Test Application</h1><h2>Port : 10006</h2><h3>Application is running successfully on port 10006</h3><h4>Version 1.0.1</h4>";
 	}
 	
 	
