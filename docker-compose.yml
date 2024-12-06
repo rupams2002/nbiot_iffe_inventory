@@ -3,7 +3,7 @@ services:
     image: ${DOCKER_IMAGE}
     container_name: ${CONTAINER_NAME}
     ports:
-      - "10006:10006"
+      - ${PORT}
     volumes:
       - /host/path:/container/path
     restart: always
