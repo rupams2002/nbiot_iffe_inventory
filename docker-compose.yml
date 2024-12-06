@@ -5,6 +5,6 @@ services:
     ports:
       - ${PORT}
     volumes:
-      - /host/path:/container/path
+      - /home/jenkins/data/java_data:/data/java_data
     restart: always
     
