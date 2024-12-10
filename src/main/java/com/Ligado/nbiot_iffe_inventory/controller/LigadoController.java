@@ -2,6 +2,9 @@ package com.Ligado.nbiot_iffe_inventory.controller;
 
 import java.io.IOException;
 import java.net.URI;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -37,6 +40,23 @@ public class LigadoController {
 
 	@GetMapping(value = "/HelloWorld")
     public String HelloWorld() throws Exception{
+		
+		
+		    String logFilePath = "/data/java_data/hello_world.log";
+		    String logMessage = "Accessed HelloWorld endpoint\n";
+
+		    try {
+		        // Ensure the directory exists
+		        Files.createDirectories(Paths.get("/data/java_data"));
+
+		        // Write log message to the file
+		        Files.write(Paths.get(logFilePath), logMessage.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+		    } catch (IOException e) {
+		        e.printStackTrace();
+		        return "<h1>Error</h1><p>Unable to write to log file.</p>";
+		    }
+		
+		
 		return "<h1>Test Application</h1><h2>Port : 10006</h2><h3>Application is running successfully</h3><h4>Version 1.0.5</h4>";
 	}
 	
