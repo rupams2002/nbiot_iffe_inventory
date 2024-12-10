@@ -42,7 +42,7 @@ public class LigadoController {
     public String HelloWorld() throws Exception{
 		
 		
-		    String logFilePath = "/data/java_data/hello_world.log";
+		    String logFilePath = "/data/java_data/my_data.log";
 		    String logMessage = "Accessed HelloWorld endpoint\n";
 
 		    try {
